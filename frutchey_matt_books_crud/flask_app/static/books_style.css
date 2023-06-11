@@ -1,0 +1,60 @@
+* {
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: flex;
+    width: 60%;
+    height: 100%;
+    background-color: #000055;
+    border: 4px solid lightslategrey;
+    padding-top: 20px;
+}
+
+h2 {
+    padding: 10px;
+    font-family: 'Crimson Text', serif;
+}
+
+.section_head {
+    color: white;
+}
+
+li {
+    color: white;
+    margin: 5px;
+}
+
+li a {
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.add_menu {
+    display: flex;
+}
+
+#add_book {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 20px;
+    margin: 10px 0px 10px;
+    color: white;
+    font-family: sans-serif;
+}
+
+input[type='submit']{
+    margin: 20px 0px 20px;
+    width: 200px;
+    font-family: sans-serif;
+}
+#home_nav {
+    width: 150px;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+}

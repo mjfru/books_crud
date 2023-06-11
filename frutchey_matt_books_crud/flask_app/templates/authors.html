@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='authors_style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
+    <title>Authors</title>
+</head>
+<body>
+    <h1>Our Authors</h1>
+    <div class="wrapper">
+        <form action="/create/author" method="POST">
+            <div id="add_author">
+                <h2>Add A New Author</h2>
+                <label for="new_author_name">Author's Name:</label>
+                <input type="text" name="new_author_name" class="form-control">
+                <input type="submit" name="author_submit" value="Add Author" type="button" class="btn btn-primary">
+                <a href="/books" type="button" class="btn btn-secondary" id="book_add_button">Click to View or Add Books</a>
+            </div>
+            </form>
+        <div id="author_list">
+            <h2>All Authors</h2>
+            <ul>
+            {% for author in authors %}
+                <li><a href="/author/{{ author.id }}">{{ author.name }}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
